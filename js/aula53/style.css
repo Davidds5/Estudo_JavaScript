@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+:root {
+    --primary: #18130f;
+    --accent: #f5c542;
+    --bg: #12100e;
+    --card: #201a15;
+    --text: #f3f3f3;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg);
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: var(--card);
+    width: 100%;
+    max-width: 550px;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #332920;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.campo-tarefa {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.input-tarefa {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #44372c;
+    background: #15120f;
+    color: #fff;
+    outline: none;
+}
+
+.input-tarefa:focus {
+    border-color: var(--accent);
+}
+
+.btn-tarefa {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent);
+    color: #12100e;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-tarefa:hover {
+    background: #d4a730;
+}
+
+.tarefas {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tarefas li {
+    background: #18130f;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #332920;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.tarefas li button.apagar {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.tarefas li button.apagar:hover {
+    background: #c0392b;
+}

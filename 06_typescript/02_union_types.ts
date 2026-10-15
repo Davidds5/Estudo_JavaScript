@@ -1,29 +1,27 @@
-// AULA 02: UNION TYPES (|) E TYPE ALIAS NO TYPESCRIPT
-// Objetivo: Criar tipos com valores permitidos (estilo Enum do Java)
+type MetodoDePagamento = 'PIX' | 'CARTAO' | 'DINHEIRO';
 
-// 1. Criando o Type com opções pré-definidas (Union Type)
-type StatusAgendamento = "PENDENTE" | "CONFIRMADO" | "CANCELADO";
 
-// 2. Interface usando o Type
-interface AgendamentoComStatus {
-    id: number;
-    cliente: string;
-    status: StatusAgendamento; // Só aceita um dos 3 status acima
+interface Pagamento {
+    id: number,
+    cliente: string,
+    valor: number,
+    formaPagamento: MetodoDePagamento
 }
 
-// 3. Função que manipula o status
-function atualizarStatus(agendamento: AgendamentoComStatus, novoStatus: StatusAgendamento): void {
-    agendamento.status = novoStatus;
-    console.log(`[BarberPro] Agendamento #${agendamento.id} do cliente ${agendamento.cliente} atualizado para: ${agendamento.status}`);
-}
-
-// 4. Teste Prático
-const meuAgendamento: AgendamentoComStatus = {
+const pagamentoDoCorte: Pagamento = {
     id: 1,
-    cliente: "Wesley",
-    status: "PENDENTE" // Aperte Ctrl + Espaço aqui para ver as opções!
+    cliente: 'Luiz',
+    valor: 50.00,
+    formaPagamento: "PIX"
 };
 
-atualizarStatus(meuAgendamento, "CONFIRMADO");
 
-export {};
+function processaCobranca(pagamento: Pagamento): void {
+    console.log(`Recebendo R$${pagamento.valor} do cliente ${pagamento.cliente} via ${pagamento.formaPagamento}`)
+
+}
+
+
+
+processaCobranca(pagamentoDoCorte)
+export { }

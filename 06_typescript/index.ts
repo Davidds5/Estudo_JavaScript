@@ -60,4 +60,4 @@ const agendamentoDoDia: Agendamento = {
 console.log(`Cliente: ${agendamentoDoDia.cliente.nome}`);
 console.log(`Serviço: ${agendamentoDoDia.servico.nome} (R$ ${agendamentoDoDia.servico.preco})`);
 
-export {};
+export { };

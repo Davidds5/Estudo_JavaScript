@@ -1,5 +1,6 @@
-async function cadrastaAgendamento() {
-    const url = 'https://jsonplaceholder.typicode.com/posts/rota_que_nao_existe';
+async function cadastraAgendamento() {
+    const url = 'https://jsonplaceholder.typicode.com/posts';
+
 
     const novoAgendamento = {
         cliente: 'Luiz',
@@ -33,4 +34,4 @@ async function cadrastaAgendamento() {
     }
 }
 
-cadrastaAgendamento();
+cadastraAgendamento();

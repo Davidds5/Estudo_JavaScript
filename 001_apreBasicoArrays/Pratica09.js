@@ -1,14 +1,15 @@
 const servicos = [
-    { nome: 'Corte Degradê', valor: 35 },
-    { nome: 'Barba Terapia', valor: 40 },
     { nome: 'Pezinho', valor: 15 },
-    { nome: 'Sobrancelha', valor: 10 }
+    { nome: 'Corte Degradê', valor: 35 },
+    { nome: 'Combo Completo', valor: 85 },
+    { nome: 'Barba Terapia', valor: 40 }
 ];
 
-const valorTotal = servicos.reduce((acc, item) => {
-    console.log(`Acc: ${acc} | Somando: ${item.valor}`)
+const servicoMaisCaro = servicos.reduce((maior, item) => {
+    if (item.valor > maior.valor) {
+        return item;
+    }
+    return maior;
+}, servicos[0]);
 
-    return acc + item.valor;
-}, 0)
-
-console.log(valorTotal)
+console.log(servicoMaisCaro)
